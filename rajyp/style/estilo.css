@@ -1,0 +1,666 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: auto;
+	padding: 0px;
+	background-image: url("../images/fundo.png");
+	background-position: right bottom;
+	background-attachment: fixed;
+	font-family: arial;
+	z-index: -9999;
+}
+
+.body100 {
+	height: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    /*border: 1px solid red;*/
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.backlayer {
+	margin-left: 15%;
+}
+
+.fundo {
+	padding-left: 10px;
+	padding-bottom: 10px;
+	z-index: -1;
+	position: absolute;
+	max-width: 70%;
+	min-width: 70%;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	-moz-border-radius: 0px 0px 25px 25px;
+	-webkit-border-radius: 0px 0px 25px 25px;
+	-o-border-radius: 0px 0px 25px 25px;
+	-ms-border-radius: 0px 0px 25px 25px;
+	border-radius: 0px 0px 25px 25px;
+}
+
+.cadastroForm h1 {
+	color: white;
+	-moz-text-shadow: 0px 0px 4px white;
+	-webkit-text-shadow: 0px 0px 4px white;
+	-o-text-shadow: 0px 0px 4px white;
+	-ms-text-shadow: 0px 0px 4px white;
+	text-shadow: 0px 0px 4px white;
+}
+
+.sobre {
+	font-family: Aladin; 
+	font-size:2em;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-o-border-radius: 25px;
+	-ms-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.erro {
+	position: absolute;
+	left: 85%;
+	top: 90%;
+	width: 15%;
+	height: 10%;
+	background-color: black;
+	padding-left: 10px;
+	-moz-box-shadow: 0px 0px 4px black;
+	-webkit-box-shadow: 0px 0px 4px black;
+	-o-box-shadow: 0px 0px 4px black;
+	-ms-box-shadow: 0px 0px 4px black;
+	box-shadow: 0px 0px 4px black;
+	-moz-text-shadow: 0px 0px 4px red;
+	-webkit-text-shadow: 0px 0px 4px red;
+	-o-text-shadow: 0px 0px 4px red;
+	-ms-text-shadow: 0px 0px 4px red;
+	text-shadow: 0px 0px 4px red;
+}
+
+/*NAVBAR*/
+
+.navbar {
+	position: relative;
+	background-color: black;
+	min-width: 100%;
+	padding: 1%;
+}
+	
+	
+.navbar #logo {
+	position: absolute;
+	float: left;
+	top: 5%;
+	display: inline-block;
+	color: white;
+	background-color: #232323;
+	-moz-border-radius: 0px 0px 90px 90px;
+	-webkit-border-radius: 0px 0px 90px 90px;
+	-o-border-radius: 0px 0px 90px 90px;
+	-ms-border-radius: 0px 0px 90px 90px;
+	border-radius: 0px 0px 90px 90px;
+	-moz-box-shadow: 0px 0px 6px black;
+	-webkit-box-shadow: 0px 0px 6px black;
+	-o-box-shadow: 0px 0px 6px black;
+	-ms-box-shadow: 0px 0px 6px black;
+	box-shadow: 0px 0px 6px black;
+}
+
+.navbar a:hover #logo {
+	-moz-filter: grayscale(100);
+	-webkit-filter: grayscale(100);
+	-o-filter: grayscale(100);
+	-ms-filter: grayscale(100);
+	filter: grayscale(100);
+	-moz-transition: .5s filter;
+	-webkit-transition: .5s filter;
+	-o-transition: .5s filter;
+	-ms-transition: .5s filter;
+	transition: .5s filter;
+}
+
+.formLogin, .userRight {
+	float: right;
+}
+
+.campoRight, .userRight {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+.sair {
+	padding: 15px 15px 0px 15px;
+}
+
+.sair a {
+	text-decoration: none;
+}
+
+.campoRight, .button {
+	padding: 10px;
+	float: left;
+}
+
+.userRight  img {
+	margin-top: 10px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-o-border-radius: 15px;
+	-ms-border-radius: 15px;
+	border-radius: 15px;
+}
+
+/*FORMULÁRIO*/
+
+input[type="text"], input[type="password"], input[type="date"], select {
+	width: 100%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border: none;
+	padding: 5px;
+}
+
+input[type="submit"], .botinha {
+	text-decoration: none;
+	font-style: normal;
+	border: none;
+	background-color: #ffeb03;
+	padding: 5px 16px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+	color: white;
+	-moz-text-shadow: 0px 0px 4px black;
+	-webkit-text-shadow: 0px 0px 4px black;
+	-o-text-shadow: 0px 0px 4px black;
+	-ms-text-shadow: 0px 0px 4px black;
+	text-shadow: 0px 0px 4px black;
+}
+
+input[type="submit"]:hover, .botinha:hover {
+	cursor: pointer;
+	background-color: white;
+	-moz-transition: .3s background-color;
+	-webkit-transition: .3s background-color;
+	-o-transition: .3s background-color;
+	-ms-transition: .3s background-color;
+	transition: .3s background-color;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type=radio] + label {
+	display:inline-block;
+    height:20px;
+    padding:0 0 0 25px;
+    margin:0 10px 0 0;
+    background-image:url('../images/radios.png');
+    background-repeat:no-repeat;
+    background-position:0 0;
+	background-color: black;
+	box-shadow: 0px 0px 4px black;
+	-moz-box-shadow: 0px 0px 4px black;
+	-webkit-box-shadow: 0px 0px 4px black;
+	-o-box-shadow: 0px 0px 4px black;
+	-ms-box-shadow: 0px 0px 4px black;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+}
+
+input[type=radio]:checked + label{
+    background-position:0 -30px;
+}
+
+/*REGISTRO*/
+
+.inputContainer {
+	margin: 5px 0px 0px 5px;
+}
+
+.cadastroForm input[type!='radio'] {
+	width: 100%;
+}
+
+
+.photoChooser {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+
+.photoChooser:hover {
+	cursor: pointer;
+}
+
+.photoChooser input{
+	display: none;
+}
+
+.photoChooser img, .photoChooser {
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-o-border-radius: 25px;
+	-ms-border-radius: 25px;
+	border-radius: 25px;
+}
+
+
+/*TOOLTIP*/
+
+.tooltipCont:hover .tooltip {
+	visibility: visible;
+}
+
+.tooltipCont {
+	position: relative;
+	display: inline-block;
+}
+
+.fixedTooltip {
+	visibility: visible;
+}
+
+.tooltip {
+	visibility: hidden;
+}
+
+.tooltip, .fixedTooltip {
+	z-index: 1;
+	width: 100%;
+	position: absolute;
+	color: black;
+	padding: 5px 10px;
+	text-align: center;
+	-moz-box-shadow: 1px 1px 4px black;
+	-ms-box-shadow: 1px 1px 4px black;
+	-o-box-shadow: 1px 1px 4px black;
+	-webkit-box-shadow: 1px 1px 4px black;
+	box-shadow: 1px 1px 4px black;
+	-moz-text-shadow: 1px 1px 1px #686767;
+	-ms-text-shadow: 1px 1px 1px #686767;
+	-o-text-shadow: 1px 1px 1px #686767;
+	-webkit-text-shadow: 1px 1px 1px #686767;
+	text-shadow: 1px 1px 1px #686767;
+	background-color: white;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	left: 105%;
+	top: 10%;
+}
+
+.tooltip::after, .fixedTooltip::after {
+	content: ' ';
+	position: absolute;
+	right: 100%;
+	top: 15%;
+	margin-right: -5px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent white transparent transparent;
+}
+
+/* MAIN DESIGN */
+
+.lateralBar {
+	display: inline-block;
+	background-color: gray;
+	float: left;
+	height: 100%;
+	padding: 20px;
+	padding-top: 30px;
+}
+
+.lateralBar > div input {
+	margin-bottom: 10px;
+}
+
+.center {
+	display: inline-block;
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+}
+
+.shineBack {
+	background-color: black;
+	color: white;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.imager {
+	float: left;
+	display: inline-block;
+	margin-right: 2%;
+}
+
+.whiter {
+	background-color: white;
+	padding: 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0px 0px 7px black;
+	-moz-box-shadow: 0px 0px 7px black;
+	-o-box-shadow: 0px 0px 7px black;
+	-ms-box-shadow: 0px 0px 7px black;
+	-webkit-box-shadow: 0px 0px 7px black;
+}
+
+.spanred {
+	text-decoration: none;
+	color: red;
+}
+
+.shineBack > a + a {
+	float: right;
+}
+
+.imageLinks {
+	background-color: rgba(0,0,0,0.5);
+	padding-left: 2%;
+	padding-top: 2%;
+	height:100%;
+}
+
+.imageLinks img {
+	margin-right: 30px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.imageLinks img:hover{
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	box-shadow: 0px 0px 6px black;
+	-moz-box-shadow: 0px 0px 6px black;
+	-o-box-shadow: 0px 0px 6px black;
+	-ms-box-shadow: 0px 0px 6px black;
+	-webkit-box-shadow: 0px 0px 6px black;
+	transition: filter .5s, box-shadow .5s;
+	-moz-transition: filter .5s, box-shadow .5s;
+	-o-transition: filter .5s, box-shadow .5s;
+	-ms-transition: filter .5s, box-shadow .5s;
+	-webkit-transition: filter .5s, box-shadow .5s;
+}
+
+iframe {
+	border: none;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+/*Registro 2*/
+
+.mensagemRegistro {
+	padding: 5px;
+	font-size: 2em;
+	color: white;
+	text-shadow: 0px 0px 22px black;
+	-moz-text-shadow: 0px 0px 22px black;
+	-ms-text-shadow: 0px 0px 22px black;
+	-o-text-shadow: 0px 0px 22px black;
+	-webkit-text-shadow: 0px 0px 22px black;
+}
+
+#border {
+	border: 2px solid black;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: black;
+	text-shadow: none;
+	-moz-text-shadow: none;
+	-ms-text-shadow: none;
+	-o-text-shadow: none;
+	-webkit-text-shadow: none;
+}
+
+#border:hover {
+	border: 2px solid black;
+	background-color: black;
+	color: white;
+	transition: 1s border, 1s background-color;
+	-moz-transition: 1s border, 1s background-color;
+	-ms-transition: 1s border, 1s background-color;
+	-o-transition: 1s border, 1s background-color;
+	-webkit-transition: 1s border, 1s background-color;
+}
+
+/* Cronograma */
+
+.spacer {
+	margin-left: 10%;
+	margin-top: 5%;
+	height: 100%;
+}
+
+.cronograma {
+	border-collapse: collapse;
+	border: none;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-color: white;
+	box-shadow: 0px 0px 16px black;
+	float: left;
+}
+
+.cronograma .header {
+	background-color: white;
+}
+
+.cronograma .header th {
+	border-bottom: 2px dashed black;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.cronograma td, .cronograma th {
+	padding: 10px 5px;
+
+}
+
+.cronograma tbody tr:first-child th {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	min-width: 50px;
+	max-width: 50px;
+}
+
+.cronograma td {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.cronograma td:hover, .cronograma th[onclick]:hover {
+	cursor: pointer;
+	border: 1px solid black;
+}
+
+.colorContainer {
+	border: 1px solid black;
+}
+
+.colorContainer input {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.hiddenerConteiner {
+	height: inherit;
+}
+
+.hiddener {
+	margin-top: 125%;
+}
+
+/*Checklists*/
+
+.checklist {
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+	border-collapse: collapse;
+}
+
+.checklist tr {
+	border-radius: 20px;
+}
+
+.checklist th {
+	padding: 5px 16px;
+	width: 50%;
+	text-align: center;
+}
+
+.checklist tr:not(.header):hover th {
+	padding: 10px 20px;
+}
+
+.checklist tr:not(.header):hover {
+	border: 1px solid black;
+}
+
+.checklist label {
+	cursor: pointer;
+}
+
+.checklistCheck {
+	display: none;
+}
+
+/*Loader*/
+
+.loader {
+	visibility: hidden;
+	width:30px;
+	float:left;
+	height:30px;
+	border: 5px solid #f5f5f5;
+	border-radius:50%;
+	border-top: 5px solid #3498db;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width:20px;
+	height:20px;
+	-moz-animation: spin .5s cubic-bezier(0, 0, 0.2, 1) infinite;
+	-ms-animation: spin .5s cubic-bezier(0, 0, 0.2, 1) infinite;
+	-o-animation: spin .5s cubic-bezier(0, 0, 0.2, 1) infinite;
+	-webkit-animation: spin .5s cubic-bezier(0, 0, 0.2, 1) infinite;
+	animation: spin .5s cubic-bezier(0, 0, 0.2, 1) infinite;
+	margin-right: 5px;
+	margin-left: 40%;
+}
+
+-webkit-@keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+-moz-@keyframes spin {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+
+
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.check {
+	display: none;
+	background-image: url('../images/check.png');
+    background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+	animation-name: safeness;
+	-webkit-animation-name: safeness;
+	-moz-animation-name: safeness;
+	-ms-animation-name: safeness;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	margin-left: 45%;
+}
+
+-webkit-@keyframes safeness {
+	0% {-webkit-opacity: 0}
+	100% {-webkit-opacity: 1}
+}
+
+-moz-@keyframes safeness {
+	0% {-moz-opacity: 0}
+	100% {-moz-opacity: 1}
+}
+
+@keyframes safeness {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
